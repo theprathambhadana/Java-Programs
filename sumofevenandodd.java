@@ -22,6 +22,7 @@ public class sumofevenandodd {
         }while(choice==1);
         System.out.println("Sum of even numbers: " + evenSUM);
         System.out.println("Sum of odd numbers: " + oddSUM);
+        sc.close();
 
     }
 }

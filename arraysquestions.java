@@ -47,7 +47,7 @@ public class arraysquestions {
 
     public static int ThreeSum(int[] nums){
         int n = nums.length;
-        int Sum[] = new int[n];
+        //int Sum[] = new int[n];
 
         for(int i=0; i<n; i++){
             for(int j=i+1; j<n; j++){
