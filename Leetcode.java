@@ -56,3 +56,28 @@ class Solution {
         return -1;
     }
 }
+
+class Solution {
+    public int maxDigitRange(int[] nums) {
+        int sum = 0;
+        int maxRange = -1;
+        for(int i=0; i<nums.length; i++){
+            int max = Integer.MIN_VALUE;
+            int min = Integer.MAX_VALUE;
+            int num = nums[i];
+            while(num>0){
+                int digit = num%10;
+                max = Math.max(max,digit);
+                min = Math.min(min,digit);
+                num/=10;
+            }
+            int range = max - min;
+            if(range>maxRange){
+                maxRange=range;
+                sum=nums[i];
+            }else if(range==maxRange){
+                sum+=nums[i];
+            }
+        }return sum;
+    }
+}
